@@ -1,50 +1,53 @@
-.btn-img
+*,*::before,*::after
 {
-    width: 25px;
-    height: 25px;
-}
-#grid
-{
-    
-    margin-top: 10%;
-    margin-left: auto;
-    margin-right: auto;
-}
+    font-weight: normal;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 
-.btn
-{
-    font-size: 20px;
-    background-color: transparent;
-    padding-bottom: 25px;
-    padding-top: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
 }
-#bs,#div,#sq,#sqr
+body
 {
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-left: 37px;
-    padding-right: 37px;
+    padding:0;
+    margin: 0%;
+    background: linear-gradient(to right , rgb(15, 236, 126) ,#2966e9);
 }
-#divx
+.grid
 {
-    font-size: 15px;
-    padding-right: 45px;
-    padding-left: 45px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,80px);
+    grid-gap: 1px;
 }
-#neg
-{
-    padding-right: 45px;
-    padding-left: 45px;
+.grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5);
 }
-#eq
-{
-    padding-top: 100%;
-    padding-bottom: 100%;
+.grid > button:hover{
+    transition: ease-in 0.2s;
+    background-color: rgba(255, 255, 255, 0.8);
 }
-#inputBox
-{
-    height: 30px;
-    width : 100%;
+.output{
+    grid-column: 1/-1;
+    background-color:rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding:10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .prevOper{
+    color:rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+}
+.output .currOper{
+    color:white;
+    font-size: 3.5rem;
 }
